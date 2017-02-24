@@ -1,0 +1,21 @@
+extend ../layout
+
+block content
+  .container
+    .row
+      each item in movies
+        .col-md-7
+          embed(src="#{movies.flash}",allowFullScreen="true",quality="heigh",width="720",height="600",algin="middle",type="application/x-shockwave-flash")
+        .col-md-5
+          dl.dl-horizontal
+            dt 电影名字
+            dd= movies.title
+            dt 导演
+            dd= movies.doctor
+            dt 国家
+            dd= movies.country
+            dt 语言
+            dd= movies.language
+            dt 简介
+            dd= movies.summary
+         
